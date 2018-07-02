@@ -80,7 +80,7 @@ public:
 
 }
 
-NANO_INLINE_VAR(detail::find_end_fn, find_end)
+NANO_DEFINE_CPO(detail::find_end_fn, find_end)
 
 #if 0
 

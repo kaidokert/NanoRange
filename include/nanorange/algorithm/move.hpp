@@ -70,7 +70,7 @@ public:
 
 } // namespace detail
 
-NANO_INLINE_VAR(detail::move_fn, move)
+NANO_DEFINE_CPO(detail::move_fn, move)
 
 namespace detail {
 
@@ -115,7 +115,7 @@ public:
 
 } // namespace detail
 
-NANO_INLINE_VAR(detail::move_backward_fn, move_backward)
+NANO_DEFINE_CPO(detail::move_backward_fn, move_backward)
 
 NANO_END_NAMESPACE
 

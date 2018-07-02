@@ -73,7 +73,7 @@ public:
 
 } // namespace detail
 
-NANO_INLINE_VAR(detail::copy_fn, copy)
+NANO_DEFINE_CPO(detail::copy_fn, copy)
 
 namespace detail {
 
@@ -96,7 +96,7 @@ struct copy_n_fn {
 
 } // namespace detail
 
-NANO_INLINE_VAR(detail::copy_n_fn, copy_n)
+NANO_DEFINE_CPO(detail::copy_n_fn, copy_n)
 
 namespace detail {
 
@@ -147,7 +147,7 @@ public:
 
 } // namespace detail
 
-NANO_INLINE_VAR(detail::copy_if_fn, copy_if)
+NANO_DEFINE_CPO(detail::copy_if_fn, copy_if)
 
 namespace detail {
 
@@ -192,7 +192,7 @@ public:
 
 } // namespace detail
 
-NANO_INLINE_VAR(detail::copy_backward_fn, copy_backward)
+NANO_DEFINE_CPO(detail::copy_backward_fn, copy_backward)
 
 NANO_END_NAMESPACE
 
