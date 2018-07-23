@@ -1,3 +1,13 @@
+#if (defined(__cpp_exceptions) || defined(__EXCEPTIONS) || defined(_CPPUNWIND)) && !defined(NANO_NOEXCEPTION)
+    #define NANO_THROW(exception) throw exception
+    //#define NANO_TRY try
+    //#define NANO_CATCH(exception) catch(exception)
+#else
+#define NANO_THROW(exception) std::abort()
+//#define NANO_TRY if(true)
+//#define NANO_CATCH(exception) if(false)
+#endif
+
 // nanorange.hpp
 //
 // Copyright (c) 2018 Tristan Brindle (tcbrindle at gmail dot com)
@@ -2608,7 +2618,7 @@ struct projected_helper<
 
     // We shouldn't need to define this, as we only need its return type,
     // but GCC gets stroppy sometimes.
-    indirect_result_t<Proj&, I> operator*() const { throw 0; };
+    indirect_result_t<Proj&, I> operator*() const { NANO_THROW(0); };
 };
 
 template <typename, typename, typename = void>
